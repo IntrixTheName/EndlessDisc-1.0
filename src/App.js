@@ -1,9 +1,11 @@
-import logo from './logo-notext.svg';
+import logo from './assets/logo-notext.svg';
 import './App.css';
+import Toolbar from './components/Toolbar.js';
 
 function App() {
   return (
     <div className="App">
+      <Toolbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
