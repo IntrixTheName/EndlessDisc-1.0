@@ -1,7 +1,7 @@
 //Inspiration for this toolbar taken from ChatGPT exerpt, and modified for use here
 
 import React from 'react';
-import 'Toolbar.css';
+import './Toolbar.css';
 import banner_logo from '../assets/logo-notext.svg';
 
 function ToolbarItem(props) {
