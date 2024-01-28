@@ -3,8 +3,8 @@
 import React from 'react';
 import banner_logo from '../assets/logo-banner.svg';
 
-function ToolbarItem(dest) {
-  return <button onclick={dest.action}>{dest.text}</button>
+function ToolbarItem(text) {
+  return <button>{text}</button>
 }
 
 function Toolbar() {
