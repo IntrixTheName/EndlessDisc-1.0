@@ -12,7 +12,7 @@ function Toolbar() {
   return (
     <div className="toolbar">
       <img src={banner_logo} alt="Endless Disc" width="192px" height="108px" />
-      <ul className="tabs">
+      <ul className="tab">
         <ToolbarItem text="Home" />
         <ToolbarItem text="Library" />
         <ToolbarItem text="Import" />
