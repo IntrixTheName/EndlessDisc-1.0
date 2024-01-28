@@ -10,9 +10,6 @@ function App() {
           Edit <code>src/App.js</code> and save to reload. Hello Bradley.
         </p>
       </header>
-      <body>
-        <p>Sample text to make sure the page isn't broken...</p>
-      </body>
     </div>
   );
 }

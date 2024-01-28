@@ -1,10 +1,10 @@
 //Inspiration for this toolbar taken from ChatGPT exerpt, and modified for use here
 
 import React from 'react';
-import banner_logo from '../assets/logo-banner.svg';
+import banner_logo from '../assets/logo-notext.svg';
 
 function ToolbarItem(props) {
-  return <button>{props.text}</button>
+  return <button class="button">{props.text}</button>
 }
 
 function Toolbar() {

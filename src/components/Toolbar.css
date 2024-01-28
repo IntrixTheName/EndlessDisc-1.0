@@ -1,25 +1,33 @@
+@import url("../App.css");
+
 .toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: var(--accent2_bkgd);
+    color: var(--primary1);
   }
   
   .logo {
     font-size: 1.5rem;
   }
   
-  .buttons button {
-    margin-left: 10px;
-    padding: 8px 12px;
-    background-color: #555;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .buttons button:hover {
-    background-color: #777;
-  }
+  .button {
+    /* Element Properties */
+    background-color: var(--accent2);
+    width: 75%;
+    border: 2px solid var(--primary1);
+    transition-duration: 0.25s;
+
+    /* Text Properties */
+    font-family: MontserratBold;
+    color: var(--primary1);
+}
+.button:hover {
+    /* Element Properties */
+    background-color: var(--primary1);
+
+    /* Text Properties */
+    color: var(--accent2);
+}
