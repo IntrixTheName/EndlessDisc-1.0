@@ -3,8 +3,8 @@
 import React from 'react';
 import banner_logo from '../assets/logo-banner.svg';
 
-function ToolbarItem(text) {
-  return <button>{text}</button>
+function ToolbarItem(props) {
+  return <button>{props.text}</button>
 }
 
 function Toolbar() {
