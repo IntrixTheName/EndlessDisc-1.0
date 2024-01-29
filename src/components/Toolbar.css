@@ -2,25 +2,27 @@
 
 .toolbar {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
   align-items: center;
-  padding: 10px;
   background-color: var(--accent2_bkgd);
   color: var(--primary1);
 }
 
 .tab {
   list-style-type: none;
-  margin: 20px;
-  padding: 0;
+  align-items: left;
 }
 
 .button {
   font: 1.5em MontserratBold;
   display: inline;
   float: left;
+  padding: 10px 25px;
+  margin: 5px;
   background-color: var(--accent2);
   border: 2px solid var(--primary1);
+  border-radius: 5px;
   transition-duration: 0.25s;
   color: var(--primary1);
 }

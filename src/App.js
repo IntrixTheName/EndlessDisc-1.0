@@ -4,12 +4,19 @@ import Toolbar from './components/Toolbar.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+
+      <nav>
         <Toolbar />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Hello Bradley.
-        </p>
+      </nav>
+
+      <header className="App-header">
+        <p>All clear. Any updates will be posted on the notice board.</p>
       </header>
+
+      <body>
+
+      </body>
+
     </div>
   );
 }
