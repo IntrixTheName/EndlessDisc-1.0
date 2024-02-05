@@ -1,5 +1,6 @@
 # Endless Disc - Music Library Manager
-A full-stack tool using MySQL & NodeJS for managing a music library and tailoring the library to individual user's needs
+
+A full-stack tool using MongoDB & NodeJS for managing a music library and tailoring the library to individual user's needs
 
 ## Project Vision
 
@@ -7,8 +8,8 @@ This project is intended to alleviate a problem present in the current method us
 
 ## Project Overview
 
-On the back end, MongoDB is used to track all the information associated with a track. This can be standard tags like "artist" and "album", but also includes custom tags like "listener" and "participant" that may not exist in the defined standard. This then connects to a webpage built with React/Node.JS where users can interact with the system and \<continue typing here tomorrow\>
+On the back end, MongoDB is used to track all the information associated with a track. This can be standard tags like "artist" and "album", but also includes custom tags like "listener" and "album group" that may not exist in the defined standard. This then connects to a webpage built with React/NodeJS where users can interact with the system. The webpage provides pages for importing and exporting tracks, managing the library, and a notice board for users to see updates or upcoming service outages.
 
 ## Resources
 
-The wiki page contains additional documentation about this project, both for users and as a showcase for my portfolio
+The wiki page contains additional documentation about this project, both for users and as a showcase for my portfolio. The wiki page contains the polished and summarized documentation while additional resources can be located in the **documentation** folder.
