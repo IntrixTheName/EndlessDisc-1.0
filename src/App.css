@@ -12,8 +12,8 @@
   --accent2: #99C1C0;
   --accent2_bkgd: #99C1C088;
 }
-
-@font-face {font-family: MontserratBold; src: url('./assets/Montserrat/Montserrat Bold.ttf');}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+/*@font-face {font-family: Montserrat; src: url('https://fonts.googleapis.com/css2?family=Montserrat');}*/
 
 
 
@@ -26,7 +26,7 @@
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  font-family: MontserratBold;
+  font-family: Montserrat, sans-serif;
 }
 
 .App-header {

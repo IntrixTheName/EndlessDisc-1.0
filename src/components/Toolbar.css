@@ -1,4 +1,5 @@
 @import url("../App.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 .toolbar {
   display: flex;
@@ -16,7 +17,7 @@
 }
 
 .header {
-  font-family: MontserratBold;
+  font-family: Montserrat, sans-serif;
   background-color: #282c34;
   min-height: 1vh;
   display: flex;
@@ -38,7 +39,7 @@
 
 .link {
   text-decoration: none;
-  font: 1.5em MontserratBold;
+  font: 1.5em Montserrat;
   display: inline;
   float: left;
   display: inline;
