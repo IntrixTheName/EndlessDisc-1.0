@@ -11,7 +11,7 @@ function ToolbarItem(props) {
 function Toolbar() {
   return (
     <div className="toolbar">
-      <img src={logo} alt="Endless Disc" width="100px" height="100px" />
+      <img src={logo} alt="Endless Disc" width="50px" height="50px" />
       <ul className="tab">
         <ToolbarItem text="Home" />
         <ToolbarItem text="Notices" />

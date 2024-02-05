@@ -20,7 +20,7 @@
 /*For App.js----------------------------------------------------------------------------------------------------------*/
 .App {
   text-align: center;
-  background-color: var(--primary2_bkgd);
+  /*background-color: var(--accent1_bkgd);*/
   background-image: url('./assets/logo-notext.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -40,12 +40,11 @@
   color: white;
 }
 
+/*Unused Items (for now, may see use later)-----------------------------------------------------------------------------
+
 .App-link {
   color: #61dafb;
 }
-
-
-/*Unused Items (for now, may see use later)-----------------------------------------------------------------------------
 
 .App-logo {
   height: 40vmin;
