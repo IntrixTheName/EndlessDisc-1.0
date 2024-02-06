@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import Toolbar from "./Toolbar";
+//import Toolbar from "./Toolbar";
 import './Toolbar.css';
 import logo from '../assets/logo-notext.svg';
 

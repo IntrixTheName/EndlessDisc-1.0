@@ -12,33 +12,20 @@
   --accent2: #99C1C0;
   --accent2_bkgd: #99C1C088;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('./assets/fonts/Montserrat-Medium.ttf');
+} @font-face {
+  font-family: "Montserrat Bold";
+  src: url('./assets/fonts/Montserrat-Bold.ttf');
+} @font-face {
+  font-family: "Montserrat Thin";
+  src: url('./assets/fonts/Montserrat-Thin.ttf');
+}
 /*@font-face {font-family: Montserrat; src: url('https://fonts.googleapis.com/css2?family=Montserrat');}*/
 
 
-
-/*For App.js----------------------------------------------------------------------------------------------------------*/
-.App {
-  text-align: center;
-  /*background-color: var(--accent1_bkgd);*/
-  background-image: url('./assets/logo-notext.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  font-family: Montserrat, sans-serif;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 1vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  color: white;
-}
 
 /*Unused Items (for now, may see use later)-----------------------------------------------------------------------------
 
