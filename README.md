@@ -1,6 +1,6 @@
 # Endless Disc - Music Library Manager
 
-A full-stack tool using MongoDB & NodeJS for managing a music library and tailoring the library to individual user's needs
+A full-stack tool using MongoDB, NodeJS, and React for managing and tailoring a music library to individual user's needs
 
 ## Project Vision
 
