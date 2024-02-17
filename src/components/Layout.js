@@ -22,7 +22,7 @@ const Layout = () => {
       const records = await response.json();
       const now = new Date()
       const one_week_ago = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).getTime(); 
-      if (!records || new Date(records[0].date).getTime() < one_week_ago) {setNews("Yay! updates to show from the last week!"); return;}
+      if (!records || new Date(records[0].date).getTime() < one_week_ago) {setNews("Yay! No updates to show from the last week!"); return;}
       else {setNews(`${records.length > 1 ? `${records.length} updates`:`1 update`} within the last week. Latest: ${records[0].date.split('T')[0]} | ${records[0].title}`);}
     }
     fetchData();
