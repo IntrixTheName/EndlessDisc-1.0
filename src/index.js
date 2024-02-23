@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Notices from "./pages/Notices";
+import Radio from "./pages/Radio";
 import Library from "./pages/Library";
 import Import from "./pages/Import";
 import Export from "./pages/Export";
@@ -20,9 +21,10 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="notices" element={<Notices />} />
+          <Route path="radio" element={<Radio />} />
           <Route path="library" element={<Library />} />
           <Route path="import" element={<Import />} />
-          <Route path="Export" element={<Export />} />
+          <Route path="export" element={<Export />} />
         </Route>
       </Routes>
     </BrowserRouter>

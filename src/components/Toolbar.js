@@ -15,6 +15,7 @@ function Toolbar() {
       <ul className="tab">
         <ToolbarItem text="Home" />
         <ToolbarItem text="Notices" />
+        <ToolbarItem text="Radio" />
         <ToolbarItem text="Library" />
         <ToolbarItem text="Import" />
         <ToolbarItem text="Export" />
