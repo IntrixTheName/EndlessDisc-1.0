@@ -34,6 +34,7 @@ const Layout = () => {
             <Link to="/"><img src={logo} alt="Endless Disc" width="50px" height="50px" /></Link>
             <ul className="tab">
                 <ToolbarItem dest="/library" text="Library" />
+                <ToolbarItem dest="/radio" text="Radio" />
                 <ToolbarItem dest="/import" text="Import" />
                 <ToolbarItem dest="/export" text="Export" />
                 <ToolbarItem dest="/notices" text="Notices" />

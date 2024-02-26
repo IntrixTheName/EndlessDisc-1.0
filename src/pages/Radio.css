@@ -6,3 +6,12 @@
     border: 2px solid var(--primary1);
     border-radius: 5px;
 }
+
+audio {
+    display: block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--accent2_bkgd);
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+}

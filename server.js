@@ -56,5 +56,11 @@ app.get("get-notices/:id", async (req, res) => {
   }
 });
 
+/*app.get("get-radio", async (req, res) => {
+  try {
+    let result = await 
+  }
+}) */
+
 //Listen on the port
 app.listen(PORT);
