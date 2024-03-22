@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="420mm"
+   height="200mm"
+   viewBox="0 0 420 200"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="Endless Dial (banner Inkscape).svg">
+  <defs
+     id="defs2">
+    <rect
+       x="173.1131"
+       y="123.97619"
+       width="225.2738"
+       height="34.773811"
+       id="rect877" />
+    <rect
+       x="216.95833"
+       y="44.601189"
+       width="225.2738"
+       height="42.333336"
+       id="rect861" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="517.92947"
+     inkscape:cy="341.85672"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     width="298mm" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="opacity:1">
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#073242;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1402"
+       sodipodi:sides="6"
+       sodipodi:cx="100.67678"
+       sodipodi:cy="97.219345"
+       sodipodi:r1="80.969879"
+       sodipodi:r2="70.121971"
+       sodipodi:arg1="-1.0471976"
+       sodipodi:arg2="-0.52359878"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 141.16172,27.097371 40.48494,70.12197 -40.48494,70.121979 -80.969875,0 L 19.706902,97.219349 60.191838,27.097375 Z"
+       inkscape:transform-center-x="1.3064639e-06"
+       inkscape:transform-center-y="-1.710525e-06"
+       inkscape:label="outer_ring" />
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#248188;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1404"
+       sodipodi:sides="6"
+       sodipodi:cx="100.67136"
+       sodipodi:cy="97.224731"
+       sodipodi:r1="60.723728"
+       sodipodi:r2="52.588291"
+       sodipodi:arg1="-1.0471976"
+       sodipodi:arg2="-0.52359882"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 131.03322,44.636439 30.36186,52.588289 -30.36186,52.588292 -60.723725,0 L 39.947628,97.224734 70.30949,44.636442 Z"
+       inkscape:transform-center-x="1.4007448e-06"
+       inkscape:transform-center-y="-2.9900515e-06"
+       inkscape:label="inner_ring" />
+    <path
+       style="fill:none;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 123.16188,58.679307 103.35487,92.985989 95.142449,107.21024"
+       id="path1464"
+       inkscape:label="knob_needle" />
+    <path
+       style="fill:#3181c6;fill-opacity:1;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 78.995708,58.433033 3.712991,6.431106"
+       id="path1468"
+       inkscape:label="dial_dot1" />
+    <path
+       style="fill:#3181c6;fill-opacity:1;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 56.86797,97.219339 7.426004,10e-6"
+       id="path1468-9"
+       inkscape:label="dial_dot2" />
+    <path
+       style="fill:#3181c6;fill-opacity:1;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 78.775056,135.70911 3.713008,-6.43109"
+       id="path1468-9-45"
+       inkscape:label="dial_dot3" />
+    <path
+       style="fill:#3181c6;fill-opacity:1;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 118.06375,129.27801 3.71299,6.4311"
+       id="path1468-1"
+       inkscape:label="dial_dot4" />
+    <path
+       style="fill:#3181c6;fill-opacity:1;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 136.27554,97.219339 7.42604,10e-6"
+       id="path1468-9-4"
+       inkscape:label="dial_dot5" />
+    <text
+       xml:space="preserve"
+       id="text859"
+       style="font-weight:bold;font-size:19.7556px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';white-space:pre;shape-inside:url(#rect861);fill:#cc8a1c;fill-opacity:1;"
+       transform="translate(-31.598804,1.5119041)"><tspan
+         x="216.95898"
+         y="75.728226"><tspan
+           style="font-size:33.8667px;fill:#cc8a1c;fill-opacity:1">Endless Dial</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text875"
+       style="font-weight:bold;font-size:22.5778px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';white-space:pre;shape-inside:url(#rect877);fill:#248188;fill-opacity:1;"
+       transform="translate(13.758336,-12.170835)"><tspan
+         x="173.11328"
+         y="144.72767"><tspan
+           style="font-size:22.5778px;fill:#248188;fill-opacity:1">Online Radio</tspan></tspan></text>
+  </g>
+</svg>

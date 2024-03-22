@@ -8,14 +8,11 @@ const PORT = 5000;
 //Configure modules with express
 app.use(express.json());
 app.use(cors());
-app.use(function (req, res, next) {
+/*app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  res.header("Access-Control-Allow-Headers", "*");
   next();
-});
+});*/
 
 //Start the React portion of the app
 spawn("npm", ["start"]);
@@ -35,6 +32,10 @@ const { execArgv } = require("process");
 mongoose.connect("mongodb://localhost:27017/endless-disc");
 console.log("Connected to Database");
 
+
+
+
+
 //Get Notices - 
 app.get("/get-notices", async (req, res) => {
   //console.log("Triggered /get-notices");
@@ -46,7 +47,7 @@ app.get("/get-notices", async (req, res) => {
   }
 });
 
-app.get("get-notices/:id", async (req, res) => {
+app.get("/get-notices/:id", async (req, res) => {
   //console.log(`Triggered /get-notices/${req.params['id']}`);
   try {
     let result = await Notices.find({ _id: req.params["id"] });
@@ -56,7 +57,7 @@ app.get("get-notices/:id", async (req, res) => {
   }
 });
 
-/*app.get("get-radio", async (req, res) => {
+/*app.get("/get-radio", async (req, res) => {
   try {
     let result = await 
   }

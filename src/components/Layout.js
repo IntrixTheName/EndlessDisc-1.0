@@ -1,16 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import React, {useState, useEffect} from "react";
-//import Toolbar from "./Toolbar";
-import './Toolbar.css';
-import logo from '../assets/logo-notext.svg';
-
-function ToolbarItem(props) {
-    return (
-    <li className="button">
-        <Link className="link" to={props.dest}>{props.text}</Link>
-    </li>
-    )
-  }
+import Toolbar from "./Toolbar";
+import './Layout.css';
 
 const Layout = () => {
   const [news, setNews] = useState("")
@@ -30,16 +21,7 @@ const Layout = () => {
 
     return (
       <>
-        <nav className="toolbar">
-            <Link to="/"><img src={logo} alt="Endless Disc" width="50px" height="50px" /></Link>
-            <ul className="tab">
-                <ToolbarItem dest="/library" text="Library" />
-                <ToolbarItem dest="/radio" text="Radio" />
-                <ToolbarItem dest="/import" text="Import" />
-                <ToolbarItem dest="/export" text="Export" />
-                <ToolbarItem dest="/notices" text="Notices" />
-            </ul>
-        </nav>
+        <Toolbar />
 
         <header className="header">
             <p>{news}</p>
