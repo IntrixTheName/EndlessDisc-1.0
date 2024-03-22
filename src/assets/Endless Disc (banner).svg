@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="420mm"
+   height="200mm"
+   viewBox="0 0 420 200"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2">
+    <rect
+       x="173.1131"
+       y="123.97619"
+       width="277.65863"
+       height="34.773811"
+       id="rect877" />
+    <rect
+       x="216.95833"
+       y="44.601189"
+       width="225.2738"
+       height="42.333336"
+       id="rect861" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     style="opacity:1">
+    <path
+       style="fill:none;stroke:#073242;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1402"
+       d="m 141.16172,27.097371 40.48494,70.12197 -40.48494,70.121979 -80.969875,0 L 19.706902,97.219349 60.191838,27.097375 Z" />
+    <path
+       style="fill:none;stroke:#248188;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1404"
+       d="m 131.03322,44.636439 30.36186,52.588289 -30.36186,52.588292 -60.723725,0 L 39.947628,97.224734 70.30949,44.636442 Z" />
+    <text
+       xml:space="preserve"
+       id="text859"
+       style="font-weight:bold;font-size:19.7556px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';white-space:pre;shape-inside:url(#rect861);fill:#cc8a1c;fill-opacity:1;"
+       transform="translate(-31.598804,1.5119041)"><tspan
+         x="216.95898"
+         y="75.728226"><tspan
+           style="font-size:33.8667px;fill:#cc8a1c;fill-opacity:1">Endless Disc</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text875"
+       style="font-weight:bold;font-size:22.5778px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';white-space:pre;shape-inside:url(#rect877);fill:#248188;fill-opacity:1;"
+       transform="translate(6.8791668,-12.170835)"><tspan
+         x="173.11328"
+         y="144.72767"><tspan
+           style="font-size:19.7556px">Music Library Manager</tspan></tspan></text>
+    <g
+       id="layer1-4"
+       transform="translate(-3.0237963,-38.553573)">
+      <path
+         style="fill:none;stroke:#073242;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1402-9"
+         d="m 144.18551,65.650944 40.48495,70.121966 -40.48494,70.12198 H 63.215641 L 22.730698,135.77292 63.215634,65.650948 Z" />
+      <path
+         style="fill:none;stroke:#248188;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1404-7"
+         d="m 134.05706,83.190012 30.36187,52.588288 -30.36187,52.58829 -60.723723,1e-5 L 42.97147,135.77831 73.333331,83.190015 Z" />
+      <path
+         style="fill:none;stroke:#cc8a1c;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 182.22949,65.748304 133.20422,150.66257"
+         id="path1406" />
+    </g>
+  </g>
+</svg>

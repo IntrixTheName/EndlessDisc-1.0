@@ -1,0 +1,31 @@
+@import "../App.css";
+
+/* Audio Player Styling */
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-art {
+    border-radius: 5px;
+    display: block;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100px;
+    width: 100px;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+}
+
+.track-text {
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    white-space: nowrap;
+}
