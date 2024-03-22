@@ -4,7 +4,7 @@ const EndlessDisc_Banner = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width={1517.014}
     height={575.41}
-    viewBox="0 0 401.377 152.244"
+    viewBox="0 0 411.377 152.244"
     {...props}
   >
     <defs>
@@ -50,7 +50,7 @@ const EndlessDisc_Banner = (props) => (
           fontWeight: 700,
           fontSize: "19.7556px",
           lineHeight: 1.25,
-          fontFamily: "Montserrat",
+          fontFamily: "Montserrat Bold",
           InkscapeFontSpecification: "&quot",
           whiteSpace: "pre",
           shapeInside: "url(#a)",
