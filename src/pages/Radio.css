@@ -1,9 +1,9 @@
-/* Audio Player Styling */
+/* Audio Player Styling
 .audio-player {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px; /* Adjust as needed */
+  width: 300px; /* Adjust as needed
 }
 
 .audio-player audio {
@@ -31,15 +31,15 @@
 }
 
 .play-btn::before {
-  content: "\25B6"; /* Play symbol */
+  content: "\25B6"; /* Play symbol
 }
 
 .pause-btn::before {
-  content: "\II"; /* Pause symbol */
+  content: "\II"; /* Pause symbol
 }
 
 .stop-btn::before {
-  content: "\25A0"; /* Stop symbol */
+  content: "\25A0"; /* Stop symbol
 }
 
 .time-display {
@@ -72,3 +72,4 @@
   height: 100%;
   cursor: pointer;
 }
+*/

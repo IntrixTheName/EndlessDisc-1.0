@@ -26,13 +26,11 @@ spawn("npm", ["start"]);
 //Configure database connection & import the schemas
 const mongoose = require("mongoose");
 const Notices = require("./models/notices");
-const { execArgv } = require("process");
+const Radio = require("./models/radio");
 
 //Perform initial connection to the database
 mongoose.connect("mongodb://localhost:27017/endless-disc");
 console.log("Connected to Database");
-
-
 
 
 
@@ -57,11 +55,14 @@ app.get("/get-notices/:id", async (req, res) => {
   }
 });
 
-/*app.get("/get-radio", async (req, res) => {
+app.get("/get-radio", async (req, res) => {
   try {
-    let result = await 
+    let result = await Radio.find();
+    res.json(result);
+  } catch (err) {
+    res.send("Something went wrong");
   }
-}) */
+});
 
 //Listen on the port
 app.listen(PORT);

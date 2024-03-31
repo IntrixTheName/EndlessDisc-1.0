@@ -6,6 +6,6 @@ const notice_schema = new mongoose.Schema({
     body: String, //The actual substance of the post that contains the useful information
     tags: [String], //Any tags to filter posts by, should be relevant to the notice 
     date: Date
-});
+}, 'notices');
 
 module.exports = mongoose.model("Notice", notice_schema);

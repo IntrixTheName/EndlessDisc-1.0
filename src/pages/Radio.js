@@ -27,8 +27,8 @@ function Radio() {
   const stationList = userStations.map((station) => {
     <li key={station._id} className="station">
       <AudioPlayer
-        src={station.link}
-        img={station.image_path}
+        src={station.url}
+        img={station.image}
         title={station.title}
         artist={station.artist}
       />
@@ -39,7 +39,12 @@ function Radio() {
     <div className="radio page">
       <h1>Endless Dial</h1>
       <EndlessDial_Banner width="80%" height="auto" />
-      <ul>{stationList}</ul>
+      <ul>
+        <li>
+          <AudioPlayer src="https://strm112.1.fm/back280s_mobile_mp3" img="https://pea.fm/uploads/posts/2021-03/1615135575_1_fm-a-list-80s.png" title="Back to the 80's" artist="1.FM" />
+        </li>
+        {stationList}
+      </ul>
     </div>
   );
 };
