@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Notices from "./pages/Notices";
 import Radio from "./pages/Radio";
 import Library from "./pages/Library";
@@ -20,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
           <Route path="notices" element={<Notices />} />
           <Route path="radio" element={<Radio />} />
           <Route path="library" element={<Library />} />

@@ -24,7 +24,7 @@ function Radio() {
     getRadio();
   });
 
-  const stationList = userStations.map((station) => {
+  const stationList = userStations.map((station) => (
     <li key={station._id} className="station">
       <AudioPlayer
         src={station.url}
@@ -33,7 +33,7 @@ function Radio() {
         artist={station.artist}
       />
     </li>
-  })
+  ));
 
   return (
     <div className="radio page">
