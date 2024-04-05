@@ -27,10 +27,30 @@ spawn("npm", ["start"]);
 const mongoose = require("mongoose");
 const Notices = require("./models/notices");
 const Radio = require("./models/radio");
+const Test = mongoose.model("Test", new mongoose.Schema({}, {strict: false}), "test")
 
 //Perform initial connection to the database
 mongoose.connect("mongodb://localhost:27017/endless-disc");
 console.log("Connected to Database");
+
+
+
+//For testing purposes, ensure servers are responding
+app.get("/connection-test/web-server", async (req, res) => {
+  res.json({
+    message: "server.js is responding",
+    port: PORT,
+    unix_ms: Date.now()
+  })
+})
+app.get("/connection-test/database-server", async (req, res) => {
+  try {
+    let results = await Test.find({key: "connection-test"})
+    res.json(results)
+  } catch (error) {
+    res.json({message: "Database not functional", err: error})
+  }
+})
 
 
 

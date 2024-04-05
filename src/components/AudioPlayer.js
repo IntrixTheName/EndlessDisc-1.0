@@ -1,6 +1,6 @@
 //Audio player component with inspiration from https://www.letsbuildui.dev/articles/building-an-audio-player-with-react-hooks/
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import "./AudioPlayer.css";
 import {
 	IoPlayBackSharp,
@@ -9,15 +9,34 @@ import {
 	IoPlaySkipForwardSharp,
 	IoPlaySharp,
 	IoPauseSharp,
+	IoPlayForwardCircleSharp,
+	IoPlayForwardCircleOutline,
+	IoPlayBackCircleSharp,
+	IoPlayBackCircleOutline,
+	IoPlay
 } from "react-icons/io5";
 
 function AudioPlayer(props) {
+
+	const isRadio = useRef(props.src.startsWith("http://") || props.src.startsWith("https://"))
 	const [trackProgress, setTrackProgress] = useState(0);
+	const [duration, setDuration] = useState(0);
 	const [playing, togglePlay] = useState(false);
 
 	const audioRef = useRef(new Audio(props.src));
 	const intervalRef = useRef();
 	const isReady = useRef(false);
+
+	useEffect(() => {
+		// Update duration when audio metadata is loaded
+		audioRef.current.onloadedmetadata = () => {
+		  setDuration(audioRef.current.duration);
+		};
+	
+		return () => {
+		  audioRef.current.onloadedmetadata = null; // Cleanup
+		};
+	  }, [duration]);
 
 	useEffect(() => {
 		if (playing) {
@@ -35,23 +54,59 @@ function AudioPlayer(props) {
 					<h2 className="title">{props.title}</h2>
 					<h3 className="artist">{props.artist}</h3>
 				</div>
+				{isRadio ? (<></>) : (
+					<button
+						type="button"
+						className="audio-control"
+						onClick={() => setTrackProgress(0)}
+					>
+						<IoPlaySkipBackSharp className="audio-control-child"/>
+					</button>
+				)}
+				{isRadio ? (<></>) : (
+					<button
+					type="button"
+					className="audio-control"
+					onClick={() => setTrackProgress(Math.max(0, trackProgress - 15))}
+				>
+					<IoPlayBackSharp className="audio-control-child"/>
+				</button>
+				)}
 				{playing ? (
 					<button
 						type="button"
-						className="pause"
+						className="audio-control"
 						onClick={() => togglePlay(false)}
 						aria-label="Pause"
 					>
-						<IoPauseSharp />
+						<IoPauseSharp className="audio-control-child"/>
 					</button>
 				) : (
 					<button
 						type="button"
-						className="play"
+						className="audio-control"
 						onClick={() => togglePlay(true)}
 						aria-label="Play"
 					>
-						<IoPlaySharp />
+						<IoPlaySharp className="audio-control-child"/>
+					</button>
+				)}
+				{isRadio ? (<></>) : (
+					<button
+						type="button"
+						className="audio-control"
+						onClick={() => setTrackProgress(Math.min(duration, trackProgress + 15))}
+					>
+						<IoPlayForwardSharp className="audio-control-child"/>
+					</button>
+				)}
+				{isRadio ? (<></>) : (
+					<button
+						type="button"
+						className="audio-control"
+						onClick={() => setTrackProgress(duration)}
+					>
+						<IoPlaySkipForwardSharp className="audio-control-child"/>
 					</button>
 				)}
 			</div>
