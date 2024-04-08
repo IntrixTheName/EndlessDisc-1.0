@@ -1,0 +1,51 @@
+@import "../App.css";
+
+.background {
+    background-image: url("../assets/Endless Disc (notext).svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: var(--accent2_bkgd);
+    height: 100vh;
+}
+
+.login-box {
+    background-color: var(--accent2_bkgd);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+}
+
+.login-input {
+    font-size: 1em;
+    font-family: "Montserrat Bold", sans-serif;
+    margin-bottom: 10px;
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+    color: var(--primary1);
+}
+
+.login-button {
+    display: inline;
+    float: left;
+    font-family: "Montserrat Bold", sans-serif;
+    font-weight: 700;
+    background-color: var(--accent2);
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    transition-duration: 0.25s;
+    color: var(--primary1);
+}
+.login-button:hover {
+    background-color: var(--primary1);
+    color: var(--accent2);
+  }

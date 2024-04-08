@@ -1,5 +1,6 @@
 //Import required modules
 const { exec, spawn, execFile, execSync } = require("child_process");
+const {scryptSync, randomBytes, timingSafeEqual} = require("crypto")
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -27,6 +28,7 @@ spawn("npm", ["start"]);
 const mongoose = require("mongoose");
 const Notices = require("./models/notices");
 const Radio = require("./models/radio");
+const User = require("./models/users")
 const Test = mongoose.model("Test", new mongoose.Schema({}, {strict: false}), "test")
 
 //Perform initial connection to the database
@@ -35,7 +37,8 @@ console.log("Connected to Database");
 
 
 
-//For testing purposes, ensure servers are responding
+// TESTING ---------------------------------------------------------------------
+
 app.get("/connection-test/web-server", async (req, res) => {
   res.json({
     message: "server.js is responding",
@@ -43,6 +46,7 @@ app.get("/connection-test/web-server", async (req, res) => {
     unix_ms: Date.now()
   })
 })
+
 app.get("/connection-test/database-server", async (req, res) => {
   try {
     let results = await Test.find({key: "connection-test"})
@@ -54,9 +58,39 @@ app.get("/connection-test/database-server", async (req, res) => {
 
 
 
-//Get Notices - 
+// USER & LOGIN ----------------------------------------------------------------
+
+app.post("/signup", async (req, res) => {
+  const user_info = new User({
+    username: req.body['username'],
+    email: req.body['email'],
+    identity: req.body['password'],
+  })
+
+  user_info.save().then(function(doc) {
+    console.log(`New user id: ${doc._id.toString()}`);
+    res.send(doc.username)
+  }).catch(function(err) {console.log(err)})
+})
+
+app.use("/login", (req, res) => {
+  const user = User.find({username: req.body.username})
+  if(!user) {res.status(400).send("Unknown Username")}
+  const [salt, key] = user[0].identity.split(':')
+
+  const hash_buffer = scryptSync(req.body.password, salt, 64)
+  const key_buffer = Buffer.from(key, 'hex');
+
+  const match = timingSafeEqual(hash_buffer, key_buffer);
+
+  if(match) {}
+})
+
+
+
+// NOTICES ---------------------------------------------------------------------
+
 app.get("/get-notices", async (req, res) => {
-  //console.log("Triggered /get-notices");
   try {
     let results = await Notices.find().sort({ _id: -1 });
     res.json(results);
@@ -66,7 +100,6 @@ app.get("/get-notices", async (req, res) => {
 });
 
 app.get("/get-notices/:id", async (req, res) => {
-  //console.log(`Triggered /get-notices/${req.params['id']}`);
   try {
     let result = await Notices.find({ _id: req.params["id"] });
     res.json(result);
@@ -74,6 +107,10 @@ app.get("/get-notices/:id", async (req, res) => {
     res.send("Something went wrong");
   }
 });
+
+
+
+// RADIO -----------------------------------------------------------------------
 
 app.get("/get-radio", async (req, res) => {
   try {

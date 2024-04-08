@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import useToken from './useToken'
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./components/Layout";
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Notices from "./pages/Notices";
@@ -10,26 +13,28 @@ import Library from "./pages/Library";
 import Import from "./pages/Import";
 import Export from "./pages/Export";
 import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
 
 export default function App() {
+  const {token, setToken} = useToken();
+
+  if(!token) {return <Login setToken={setToken} />}
+
   return(
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="notices" element={<Notices />} />
-          <Route path="radio" element={<Radio />} />
-          <Route path="library" element={<Library />} />
-          <Route path="import" element={<Import />} />
-          <Route path="export" element={<Export />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="notices" element={<Notices />} />
+            <Route path="radio" element={<Radio />} />
+            <Route path="library" element={<Library />} />
+            <Route path="import" element={<Import />} />
+            <Route path="export" element={<Export />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
   )
 }
 

@@ -1,5 +1,5 @@
 :root {
-  /* Project Colors, made vars for  */
+  /* Project Colors, made into vars*/
   --primary1: #073242;
   --primary1_bkgd: #07324288;
 
@@ -27,6 +27,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat Bold", sans-serif;
+  color: var(--primary1);
 }
 h1 {font-size: 2em;}
 h2 {font-size: 1.8em;}
