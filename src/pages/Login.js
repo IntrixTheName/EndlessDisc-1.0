@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 //import PropTypes from 'prop-types'
-//import {createHash, scryptSync, randomBytes, timingSafeEqual} from "crypto-browserify"
 import EndlessDisc_Banner from "../assets/EndlessDisc_Banner"
 import "./Login.css"
 
