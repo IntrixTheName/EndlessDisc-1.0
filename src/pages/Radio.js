@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import "./Radio.css";
 import EndlessDial_Banner from "../assets/EndlessDial_Banner";
 import AudioPlayer from "../components/AudioPlayer";
+import AddOption from "../components/AddOption";
 
 
 
@@ -46,6 +47,7 @@ function Radio() {
           <AudioPlayer src="https://strm112.1.fm/back280s_mobile_mp3" img="https://pea.fm/uploads/posts/2021-03/1615135575_1_fm-a-list-80s.png" title="Back to the 80's" artist="1.FM" />
         </li>
         {stationList}
+        <AddOption />
       </ul>
     </div>
   );

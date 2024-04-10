@@ -2,12 +2,14 @@
 const { exec, spawn, execFile, execSync } = require("child_process");
 const {scryptSync, randomBytes, timingSafeEqual} = require("crypto")
 const express = require("express");
+const bodyParser = require("body-parser")
 const app = express();
 const cors = require("cors");
 const PORT = 5000;
 
 //Configure modules with express
-app.use(express.json());
+//app.use(express.json());
+app.use(bodyParser.json());
 app.use(cors());
 /*app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -121,6 +123,23 @@ app.get("/get-radio", async (req, res) => {
     res.send("Something went wrong");
   }
 });
+
+app.post("/add-radio", async (req, res) => {
+  try {
+    // Process the request body (form data)
+    const formData = req.body;
+    if (formData == {}) {
+        throw new Error('No form data received');
+    }
+    // Handle the form data, including the image file
+    console.log('Received form data:', formData);
+    // Send a response (optional)
+    res.json({ message: 'Form data received successfully' });
+  } catch (error) {
+    console.error('Error handling form data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+}
+})
 
 //Listen on the port
 app.listen(PORT);

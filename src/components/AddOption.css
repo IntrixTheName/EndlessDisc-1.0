@@ -1,0 +1,91 @@
+@import "../App.css";
+
+.add {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+    background-color: var(--accent2_bkgd);
+    margin: 20px;
+}
+.add h1 {
+    margin: 0;
+}
+.add-hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 100px;
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+    background-color: var(--accent2_bkgd);
+    margin: 20px;
+}
+
+.info {
+	display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.album-art {
+	border-radius: 5px;
+    border: 2px solid var(--primary1);
+    display: block;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+}
+
+.track-text {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.input {
+	font-size: 1em;
+    font-family: "Montserrat Bold", sans-serif;
+    margin-bottom: 10px;
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+    color: var(--primary1);
+}
+
+.input-source {
+    font-size: 1em;
+    font-family: "Montserrat Bold", sans-serif;
+    margin-bottom: 10px;
+    border: 2px solid var(--primary1);
+    border-radius: 5px;
+    color: var(--primary1);
+    width: 90%;
+}
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+}
+
+.form-button {
+	font-family: "Montserrat Bold", sans-serif;
+	font-weight: 700;
+	background-color: var(--accent2);
+	border: 2px solid var(--primary1);
+	border-radius: 5px;
+	padding: 10px 20px;
+	transition-duration: 0.25s;
+	color: var(--primary1);
+    margin-bottom: 5px;
+}
+.form-button:hover {
+	background-color: var(--primary1);
+	color: var(--accent2);
+}
