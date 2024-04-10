@@ -1,5 +1,5 @@
 import EndlessDisc_Banner from "../assets/EndlessDisc_Banner";
-import AudioPlayer from "../components/AudioPlayer";
+import RadioPlayer from "../components/AudioPlayer";
 import AddOption from "../components/AddOption";
 
 const Home = () => {

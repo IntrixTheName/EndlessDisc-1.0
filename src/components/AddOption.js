@@ -28,19 +28,24 @@ function AddOption() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			await setFormData(formData);
-			console.log(formData);
+			const formDataToSubmit = new FormData();
+			formDataToSubmit.append("title", formData.title);
+			formDataToSubmit.append("artist", formData.artist);
+			formDataToSubmit.append("source", formData.source);
+			formDataToSubmit.append("image", formData.image); // Append the file here
+	
 			const response = await fetch("http://localhost:5000/add-radio", {
 				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(formData),
+				body: formDataToSubmit, // Use FormData instead of JSON.stringify
 			});
+	
 			if (!response.ok) {
 				throw new Error("Network response not ok");
 			}
+	
 			const result = await response.json();
 			console.log(`Form response: ${result}`);
-
+	
 			setFormData({
 				title: "",
 				artist: "",

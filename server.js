@@ -86,7 +86,7 @@ app.use("/login", (req, res) => {
   //const match = timingSafeEqual(hash_buffer, key_buffer);
 
   //if(match) {}
-  res.json({token: "admin"})
+  res.json({token: req.body.username})
 })
 
 

@@ -14,6 +14,17 @@ async function attempt_login(credentials) {
     const result = await response.json()
     return result;
 }
+async function signup(credentials) {
+    const response = await fetch(`http://localhost:5000/signup`, {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(credentials)
+    })
+    if(!response.ok) {console.log("signup() failed")}
+    console.log(response)
+    const result = await response.json()
+    return result;
+}
 
 
 

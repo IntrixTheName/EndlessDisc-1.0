@@ -34,6 +34,7 @@ function Radio() {
         img={station.image}
         title={station.title}
         artist={station.artist}
+        ident={station._id}
       />
     </li>
   ));

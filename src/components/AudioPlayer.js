@@ -16,16 +16,14 @@ import {
 	IoPlay
 } from "react-icons/io5";
 
-function AudioPlayer(props) {
+function RadioPlayer(props) {
 
-	const isRadio = useRef(props.src.startsWith("http://") || props.src.startsWith("https://"))
+	const ident = props.ident
 	const [trackProgress, setTrackProgress] = useState(0);
 	const [duration, setDuration] = useState(0);
 	const [playing, togglePlay] = useState(false);
 
 	const audioRef = useRef(new Audio(props.src));
-	const intervalRef = useRef();
-	const isReady = useRef(false);
 
 	useEffect(() => {
 		// Update duration when audio metadata is loaded
@@ -54,24 +52,6 @@ function AudioPlayer(props) {
 					<h2 className="title">{props.title}</h2>
 					<h3 className="artist">{props.artist}</h3>
 				</div>
-				{isRadio ? (<></>) : (
-					<button
-						type="button"
-						className="audio-control"
-						onClick={() => setTrackProgress(0)}
-					>
-						<IoPlaySkipBackSharp className="audio-control-child"/>
-					</button>
-				)}
-				{isRadio ? (<></>) : (
-					<button
-					type="button"
-					className="audio-control"
-					onClick={() => setTrackProgress(Math.max(0, trackProgress - 15))}
-				>
-					<IoPlayBackSharp className="audio-control-child"/>
-				</button>
-				)}
 				{playing ? (
 					<button
 						type="button"
@@ -85,28 +65,10 @@ function AudioPlayer(props) {
 					<button
 						type="button"
 						className="audio-control"
-						onClick={() => togglePlay(true)}
+						onClick={() => {togglePlay(true); setTrackProgress(duration)}}
 						aria-label="Play"
 					>
 						<IoPlaySharp className="audio-control-child"/>
-					</button>
-				)}
-				{isRadio ? (<></>) : (
-					<button
-						type="button"
-						className="audio-control"
-						onClick={() => setTrackProgress(Math.min(duration, trackProgress + 15))}
-					>
-						<IoPlayForwardSharp className="audio-control-child"/>
-					</button>
-				)}
-				{isRadio ? (<></>) : (
-					<button
-						type="button"
-						className="audio-control"
-						onClick={() => setTrackProgress(duration)}
-					>
-						<IoPlaySkipForwardSharp className="audio-control-child"/>
 					</button>
 				)}
 			</div>
@@ -114,4 +76,23 @@ function AudioPlayer(props) {
 	);
 }
 
-export default AudioPlayer;
+export default RadioPlayer;
+
+/* Unused parts for Song Player component in future:
+
+<button
+					type="button"
+					className="audio-control"
+					onClick={() => setTrackProgress(Math.max(0, trackProgress - 15))}
+				>
+					<IoPlayBackSharp className="audio-control-child"/>
+				</button>
+
+<button
+						type="button"
+						className="audio-control"
+						onClick={() => setTrackProgress(Math.min(duration, trackProgress + 15))}
+					>
+						<IoPlayForwardSharp className="audio-control-child"/>
+					</button>
+*/
