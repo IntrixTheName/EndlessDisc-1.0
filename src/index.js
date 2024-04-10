@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import useToken from './useToken'
-import ReactDOM from 'react-dom/client';
+import React, { useState } from "react";
+import useToken from "./useToken";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
@@ -12,33 +12,33 @@ import Radio from "./pages/Radio";
 import Library from "./pages/Library";
 import Import from "./pages/Import";
 import Export from "./pages/Export";
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-
-
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
 export default function App() {
-  const {token, setToken} = useToken("user-auth");
+  const { token, setToken } = useToken("user-auth");
 
-  if(!token) {return <Login setToken={setToken} />}
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
 
-  return(
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="notices" element={<Notices />} />
-            <Route path="radio" element={<Radio />} />
-            <Route path="library" element={<Library />} />
-            <Route path="import" element={<Import />} />
-            <Route path="export" element={<Export />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-  )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="notices" element={<Notices />} />
+          <Route path="radio" element={<Radio />} />
+          <Route path="library" element={<Library />} />
+          <Route path="import" element={<Import />} />
+          <Route path="export" element={<Export />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

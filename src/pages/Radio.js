@@ -4,8 +4,6 @@ import EndlessDial_Banner from "../assets/EndlessDial_Banner";
 import AudioPlayer from "../components/AudioPlayer";
 import AddOption from "../components/AddOption";
 
-
-
 function Radio() {
   const [userStations, setUserStations] = useState([]);
 
@@ -13,12 +11,12 @@ function Radio() {
   useEffect(() => {
     async function getRadio() {
       const response = await fetch("http://localhost:5000/get-radio");
-      if(!response.ok) {
+      if (!response.ok) {
         console.log("fetchData() fetch error occured");
         return;
       }
       const records = await response.json();
-      if(!records) {
+      if (!records) {
         console.log("fetchData() records not located");
         return;
       }
@@ -45,13 +43,18 @@ function Radio() {
       <EndlessDial_Banner width="80%" height="auto" />
       <ul>
         <li>
-          <AudioPlayer src="https://strm112.1.fm/back280s_mobile_mp3" img="https://pea.fm/uploads/posts/2021-03/1615135575_1_fm-a-list-80s.png" title="Back to the 80's" artist="1.FM" />
+          <AudioPlayer
+            src="https://strm112.1.fm/back280s_mobile_mp3"
+            img="https://pea.fm/uploads/posts/2021-03/1615135575_1_fm-a-list-80s.png"
+            title="Back to the 80's"
+            artist="1.FM"
+          />
         </li>
         {stationList}
         <AddOption />
       </ul>
     </div>
   );
-};
+}
 
 export default Radio;
