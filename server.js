@@ -1,7 +1,9 @@
 //Import required modules
 const { exec, spawn, execFile, execSync } = require("child_process");
 const { scryptSync, randomBytes, timingSafeEqual } = require("crypto");
+const multer = require("multer");
 const express = require("express");
+const mime = require("mime-types");
 const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
@@ -11,11 +13,16 @@ const PORT = 5000;
 //app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
-/*app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "*");
-  next();
-});*/
+
+//Configure uploads for multer
+const uploadSong = multer({dest: "library/songs/"})
+
+const Art = multer.diskStorage({
+  destination: (req, file, cb) => {cb(null, "library/art/")},
+  filename: (req, file, cb) => {cb(null, `${file.fieldname}`)}
+})
+const uploadArt = multer({storage: Art})
+
 
 //Start the React portion of the app
 spawn("npm", ["start"]);
@@ -130,17 +137,29 @@ app.get("/get-radio", async (req, res) => {
   }
 });
 
-app.post("/add-radio", async (req, res) => {
+app.post("/add-radio/:user", uploadArt.single("image"), async (req, res) => {
   try {
-    // Process the request body (form data)
     const formData = req.body;
     if (formData == {}) {
       throw new Error("No form data received");
     }
-    // Handle the form data, including the image file
-    console.log("Received form data:", formData);
+    
+    const radio_data = new Radio({
+      username: req.params["user"],
+      title: req.body["title"],
+      url: req.body["source"],
+      broadcaster: req.body["artist"],
+      image: ""
+    })
+
+    const doc = await radio_data.save()
+    console.log(`New radio: ${doc._id.toString()}`);
+    mime.extension()
+    exec(`mv ./library/art/image ./library/art/${doc._id}`)
+    await Radio.updateOne({_id: doc._id}, {image: doc._id})
+
     // Send a response (optional)
-    res.json({ message: "Form data received successfully" });
+    res.json({ message: "Form data stashed successfully" });
   } catch (error) {
     console.error("Error handling form data:", error);
     res.status(500).json({ error: "Internal server error" });

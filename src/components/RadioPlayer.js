@@ -1,7 +1,7 @@
 //Audio player component with inspiration from https://www.letsbuildui.dev/articles/building-an-audio-player-with-react-hooks/
 
 import React, { useState, useRef, useEffect } from "react";
-import "./AudioPlayer.css";
+import "./RadioPlayer.css";
 import {
   IoPlayBackSharp,
   IoPlayForwardSharp,

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import useToken from "../useToken";
 import "./AddOption.css";
 import { IoAdd } from "react-icons/io5";
 
 function AddOption() {
+  const { token, setToken } = useToken("user-auth");
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
     artist: "",
     source: "",
-    image: null,
+    image: null
   });
 
   const toggleForm = () => {
@@ -32,10 +34,11 @@ function AddOption() {
       formDataToSubmit.append("title", formData.title);
       formDataToSubmit.append("artist", formData.artist);
       formDataToSubmit.append("source", formData.source);
-      formDataToSubmit.append("image", formData.image); // Append the file here
+      formDataToSubmit.append("image", formData.image);
 
-      const response = await fetch("http://localhost:5000/add-radio", {
+      const response = await fetch(`http://localhost:5000/add-radio/${token}`, {
         method: "POST",
+        //headers: { "Content-Type": "multipart/form-data" },
         body: formDataToSubmit, // Use FormData instead of JSON.stringify
       });
 
