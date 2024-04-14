@@ -96,11 +96,11 @@ function Login(setToken) {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <button className="login-button" type="submit">
+          <button id="login-button" className="login-button" type="submit">
             Login
           </button>
           {isLogin ? (
-            <button className="login-button" type="button" onClick={toggleForm}>
+            <button id="signup-button" className="login-button" type="button" onClick={toggleForm}>
               But I want to sign up! <IoArrowForward />
             </button>
           ) : (
