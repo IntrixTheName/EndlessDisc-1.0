@@ -108,7 +108,7 @@ function AddOption() {
             onChange={handleInputChange}
           />
           <div className="bottom-buttons">
-            <button type="submit" className="form-button">
+            <button id="submit" type="submit" className="form-button">
               + Add Station
             </button>
             <button type="button" className="form-button" onClick={toggleForm}>
