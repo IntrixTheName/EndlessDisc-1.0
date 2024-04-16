@@ -7,7 +7,7 @@ import GitHubLogo from "../assets/github-mark.png";
 
 function ToolbarItem(props) {
   return (
-    <li className="button">
+    <li id={props.id} className="button">
       <Link className="link" to={props.dest}>
         {props.text}
       </Link>
@@ -22,11 +22,11 @@ function Toolbar() {
         <EndlessDisc_NoText width="75px" height="75px" />
       </Link>
       <ul className="tab">
-        <ToolbarItem dest="/library" text="Library" />
-        <ToolbarItem dest="/radio" text="Radio" />
-        <ToolbarItem dest="/import" text="Import" />
-        <ToolbarItem dest="/export" text="Export" />
-        <ToolbarItem dest="/notices" text="Notices" />
+        <ToolbarItem dest="/library" text="Library" id="library" />
+        <ToolbarItem dest="/radio" text="Radio" id="radio" />
+        <ToolbarItem dest="/import" text="Import" id="import" />
+        <ToolbarItem dest="/export" text="Export" id="export" />
+        <ToolbarItem dest="/notices" text="Notices" id="notices" />
         <Link to="https://github.com/IntrixTheName/EndlessDisc">
           <img src={GitHubLogo} width="30px" height="30px" />
         </Link>
